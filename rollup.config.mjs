@@ -7,13 +7,13 @@ export default {
   input: "maplibre-gl-grid-protocol.js",
   output: [
     {
-      file: "dist/maplibre-gl-grid-protocol.js",
+      file: "docs/maplibre-gl-grid-protocol.js",
       format: "iife",
       globals: { maplibregl: "maplibregl" },
       name: "GridProtocol",
     },
     {
-      file: "dist/maplibre-gl-grid-protocol.min.js",
+      file: "docs/maplibre-gl-grid-protocol.min.js",
       format: "iife",
       globals: { maplibregl: "maplibregl" },
       name: "GridProtocol",
