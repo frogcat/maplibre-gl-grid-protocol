@@ -1,0 +1,25 @@
+{
+  "name": "maplibre-gl-grid-protocol",
+  "version": "0.0.1",
+  "description": "Grid implementation using the addProtocol feature",
+  "main": "maplibre-gl-grid-protocol.js",
+  "scripts": {
+    "pbf": "pbf proto/vector_tile.proto --no-read > proto/vector_tile.js",
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "maplibre-gl-js"
+  ],
+  "author": "frogcat",
+  "license": "MIT",
+  "dependencies": {
+    "pbf": "^4.0.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-buble": "^1.0.3",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.27.4"
+  }
+}
