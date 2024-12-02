@@ -39,6 +39,7 @@ Grid implementation using the addProtocol feature
 ```
 
 3. add `grid` source
+
 ```style.json
 {
   "sources": {
@@ -53,7 +54,6 @@ Grid implementation using the addProtocol feature
 ```
 
 4. write your own layer
-
 
 ```style.json
 "layers" : [
@@ -140,7 +140,11 @@ Grid implementation using the addProtocol feature
   ]
 ```
 
-## Feature id and properties
+## About source
+
+### layer
+
+Only `line` is included
 
 ### id (8-digit fixed-length integer)
 
@@ -148,7 +152,7 @@ Grid implementation using the addProtocol feature
 
 - n : west (1), east (2), south (3), north (4)
 - ddd : degree (000 - 180)
-- mm  : minute (00-59)
+- mm : minute (00-59)
 - ss : second (00-59)
 
 ### property : label (11 character fixed length string)
@@ -210,6 +214,3 @@ default option is below.
 ### [maplibre-grid](https://github.com/maptiler/maplibre-grid) by [MapTiler](https://github.com/maptiler)
 
 Grid implementation based on Control.
-
-
-
