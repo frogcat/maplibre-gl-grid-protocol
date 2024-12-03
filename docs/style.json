@@ -43,100 +43,378 @@
       "maxzoom": 20
     },
     {
-      "id": "grid-line",
+      "id": "grid-line-0-4",
       "type": "line",
       "source": "grid",
       "source-layer": "line",
       "minzoom": 0,
-      "maxzoom": 20,
-      "filter": [
-        "==",
-        [
-          "%",
-          ["id"],
-          [
-            "case",
-            ["<", ["zoom"], 4],
-            200000,
-            ["<", ["zoom"], 5],
-            100000,
-            ["<", ["zoom"], 6],
-            50000,
-            ["<", ["zoom"], 7],
-            20000,
-            ["<", ["zoom"], 8],
-            10000,
-            ["<", ["zoom"], 9],
-            3000,
-            ["<", ["zoom"], 10],
-            2000,
-            ["<", ["zoom"], 11],
-            1000,
-            ["<", ["zoom"], 12],
-            500,
-            ["<", ["zoom"], 13],
-            200,
-            ["<", ["zoom"], 14],
-            100,
-            ["<", ["zoom"], 15],
-            30,
-            ["<", ["zoom"], 16],
-            20,
-            10
-          ]
-        ],
-        0
-      ],
+      "maxzoom": 4,
+      "filter": ["==", ["%", ["id"], 200000], 0],
       "paint": {
         "line-color": ["case", ["<", ["id"], 30000000], "#006000", "#600000"],
         "line-width": 20
       }
     },
     {
-      "id": "grid-symbol",
+      "id": "grid-symbol-0-4",
       "type": "symbol",
       "source": "grid",
       "source-layer": "line",
       "minzoom": 0,
+      "maxzoom": 4,
+      "filter": ["==", ["%", ["id"], 200000], 0],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 1,
+        "text-field": ["get", "label"],
+        "text-size": 18,
+        "text-font": ["NotoSansCJKjp-Regular"]
+      },
+      "paint": {
+        "text-color": "#ffffff"
+      }
+    },
+    {
+      "id": "grid-line-4-5",
+      "type": "line",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 4,
+      "maxzoom": 5,
+      "filter": ["==", ["%", ["id"], 100000], 0],
+      "paint": {
+        "line-color": ["case", ["<", ["id"], 30000000], "#006000", "#600000"],
+        "line-width": 20
+      }
+    },
+    {
+      "id": "grid-symbol-4-5",
+      "type": "symbol",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 4,
+      "maxzoom": 5,
+      "filter": ["==", ["%", ["id"], 100000], 0],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 1,
+        "text-field": ["get", "label"],
+        "text-size": 18,
+        "text-font": ["NotoSansCJKjp-Regular"]
+      },
+      "paint": {
+        "text-color": "#ffffff"
+      }
+    },
+    {
+      "id": "grid-line-5-6",
+      "type": "line",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 5,
+      "maxzoom": 6,
+      "filter": ["==", ["%", ["id"], 50000], 0],
+      "paint": {
+        "line-color": ["case", ["<", ["id"], 30000000], "#006000", "#600000"],
+        "line-width": 20
+      }
+    },
+    {
+      "id": "grid-symbol-5-6",
+      "type": "symbol",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 5,
+      "maxzoom": 6,
+      "filter": ["==", ["%", ["id"], 50000], 0],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 1,
+        "text-field": ["get", "label"],
+        "text-size": 18,
+        "text-font": ["NotoSansCJKjp-Regular"]
+      },
+      "paint": {
+        "text-color": "#ffffff"
+      }
+    },
+    {
+      "id": "grid-line-6-7",
+      "type": "line",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 6,
+      "maxzoom": 7,
+      "filter": ["==", ["%", ["id"], 20000], 0],
+      "paint": {
+        "line-color": ["case", ["<", ["id"], 30000000], "#006000", "#600000"],
+        "line-width": 20
+      }
+    },
+    {
+      "id": "grid-symbol-6-7",
+      "type": "symbol",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 6,
+      "maxzoom": 7,
+      "filter": ["==", ["%", ["id"], 20000], 0],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 1,
+        "text-field": ["get", "label"],
+        "text-size": 18,
+        "text-font": ["NotoSansCJKjp-Regular"]
+      },
+      "paint": {
+        "text-color": "#ffffff"
+      }
+    },
+    {
+      "id": "grid-line-7-8",
+      "type": "line",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 7,
+      "maxzoom": 8,
+      "filter": ["==", ["%", ["id"], 10000], 0],
+      "paint": {
+        "line-color": ["case", ["<", ["id"], 30000000], "#006000", "#600000"],
+        "line-width": 20
+      }
+    },
+    {
+      "id": "grid-symbol-7-8",
+      "type": "symbol",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 7,
+      "maxzoom": 8,
+      "filter": ["==", ["%", ["id"], 10000], 0],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 1,
+        "text-field": ["get", "label"],
+        "text-size": 18,
+        "text-font": ["NotoSansCJKjp-Regular"]
+      },
+      "paint": {
+        "text-color": "#ffffff"
+      }
+    },
+    {
+      "id": "grid-line-8-10",
+      "type": "line",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 8,
+      "maxzoom": 10,
+      "filter": ["==", ["%", ["id"], 2000], 0],
+      "paint": {
+        "line-color": ["case", ["<", ["id"], 30000000], "#006000", "#600000"],
+        "line-width": 20
+      }
+    },
+    {
+      "id": "grid-symbol-8-10",
+      "type": "symbol",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 8,
+      "maxzoom": 10,
+      "filter": ["==", ["%", ["id"], 2000], 0],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 1,
+        "text-field": ["get", "label"],
+        "text-size": 18,
+        "text-font": ["NotoSansCJKjp-Regular"]
+      },
+      "paint": {
+        "text-color": "#ffffff"
+      }
+    },
+    {
+      "id": "grid-line-10-11",
+      "type": "line",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 10,
+      "maxzoom": 11,
+      "filter": ["==", ["%", ["id"], 1000], 0],
+      "paint": {
+        "line-color": ["case", ["<", ["id"], 30000000], "#006000", "#600000"],
+        "line-width": 20
+      }
+    },
+    {
+      "id": "grid-symbol-10-11",
+      "type": "symbol",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 10,
+      "maxzoom": 11,
+      "filter": ["==", ["%", ["id"], 1000], 0],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 1,
+        "text-field": ["get", "label"],
+        "text-size": 18,
+        "text-font": ["NotoSansCJKjp-Regular"]
+      },
+      "paint": {
+        "text-color": "#ffffff"
+      }
+    },
+    {
+      "id": "grid-line-11-12",
+      "type": "line",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 11,
+      "maxzoom": 12,
+      "filter": ["==", ["%", ["id"], 500], 0],
+      "paint": {
+        "line-color": ["case", ["<", ["id"], 30000000], "#006000", "#600000"],
+        "line-width": 20
+      }
+    },
+    {
+      "id": "grid-symbol-11-12",
+      "type": "symbol",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 11,
+      "maxzoom": 12,
+      "filter": ["==", ["%", ["id"], 500], 0],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 1,
+        "text-field": ["get", "label"],
+        "text-size": 18,
+        "text-font": ["NotoSansCJKjp-Regular"]
+      },
+      "paint": {
+        "text-color": "#ffffff"
+      }
+    },
+    {
+      "id": "grid-line-12-13",
+      "type": "line",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 12,
+      "maxzoom": 13,
+      "filter": ["==", ["%", ["id"], 200], 0],
+      "paint": {
+        "line-color": ["case", ["<", ["id"], 30000000], "#006000", "#600000"],
+        "line-width": 20
+      }
+    },
+    {
+      "id": "grid-symbol-12-13",
+      "type": "symbol",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 12,
+      "maxzoom": 13,
+      "filter": ["==", ["%", ["id"], 200], 0],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 1,
+        "text-field": ["get", "label"],
+        "text-size": 18,
+        "text-font": ["NotoSansCJKjp-Regular"]
+      },
+      "paint": {
+        "text-color": "#ffffff"
+      }
+    },
+    {
+      "id": "grid-line-13-14",
+      "type": "line",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 13,
+      "maxzoom": 14,
+      "filter": ["==", ["%", ["id"], 100], 0],
+      "paint": {
+        "line-color": ["case", ["<", ["id"], 30000000], "#006000", "#600000"],
+        "line-width": 20
+      }
+    },
+    {
+      "id": "grid-symbol-13-14",
+      "type": "symbol",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 13,
+      "maxzoom": 14,
+      "filter": ["==", ["%", ["id"], 100], 0],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 1,
+        "text-field": ["get", "label"],
+        "text-size": 18,
+        "text-font": ["NotoSansCJKjp-Regular"]
+      },
+      "paint": {
+        "text-color": "#ffffff"
+      }
+    },
+    {
+      "id": "grid-line-14-16",
+      "type": "line",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 14,
+      "maxzoom": 16,
+      "filter": ["==", ["%", ["id"], 20], 0],
+      "paint": {
+        "line-color": ["case", ["<", ["id"], 30000000], "#006000", "#600000"],
+        "line-width": 20
+      }
+    },
+    {
+      "id": "grid-symbol-14-16",
+      "type": "symbol",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 14,
+      "maxzoom": 16,
+      "filter": ["==", ["%", ["id"], 20], 0],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 1,
+        "text-field": ["get", "label"],
+        "text-size": 18,
+        "text-font": ["NotoSansCJKjp-Regular"]
+      },
+      "paint": {
+        "text-color": "#ffffff"
+      }
+    },
+    {
+      "id": "grid-line-16-20",
+      "type": "line",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 16,
       "maxzoom": 20,
-      "filter": [
-        "==",
-        [
-          "%",
-          ["id"],
-          [
-            "case",
-            ["<", ["zoom"], 4],
-            200000,
-            ["<", ["zoom"], 5],
-            100000,
-            ["<", ["zoom"], 6],
-            50000,
-            ["<", ["zoom"], 7],
-            20000,
-            ["<", ["zoom"], 8],
-            10000,
-            ["<", ["zoom"], 9],
-            3000,
-            ["<", ["zoom"], 10],
-            2000,
-            ["<", ["zoom"], 11],
-            1000,
-            ["<", ["zoom"], 12],
-            500,
-            ["<", ["zoom"], 13],
-            200,
-            ["<", ["zoom"], 14],
-            100,
-            ["<", ["zoom"], 15],
-            30,
-            ["<", ["zoom"], 16],
-            20,
-            10
-          ]
-        ],
-        0
-      ],
+      "filter": ["==", ["%", ["id"], 10], 0],
+      "paint": {
+        "line-color": ["case", ["<", ["id"], 30000000], "#006000", "#600000"],
+        "line-width": 20
+      }
+    },
+    {
+      "id": "grid-symbol-16-20",
+      "type": "symbol",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 16,
+      "maxzoom": 20,
+      "filter": ["==", ["%", ["id"], 10], 0],
       "layout": {
         "symbol-placement": "line",
         "symbol-spacing": 1,

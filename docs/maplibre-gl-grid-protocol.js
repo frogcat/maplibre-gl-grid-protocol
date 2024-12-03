@@ -986,7 +986,7 @@ var GridProtocol = (function (exports) {
         },
         interval: function (tile) {
           if (tile.z < 5) { return 3600; }
-          if (tile.z < 8) { return 60; }
+          if (tile.z < 10) { return 60; }
           return 1;
         },
       };
