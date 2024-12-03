@@ -1,0 +1,151 @@
+{
+  "version": 8,
+  "glyphs": "https://maps.gsi.go.jp/xyz/noto-jp/{fontstack}/{range}.pbf",
+  "sources": {
+    "ortho": {
+      "type": "raster",
+      "tiles": [
+        "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}?blankTile=false"
+      ],
+      "tileSize": 256,
+      "minzoom": 2,
+      "maxzoom": 8,
+      "attribution": "<a href='https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer'>USGS Imagery Only</a>"
+    },
+    "gsi": {
+      "type": "raster",
+      "tiles": ["https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg"],
+      "minzoom": 8,
+      "maxzoom": 18,
+      "tileSize": 256,
+      "attribution": "<a href='http://maps.gsi.go.jp/development/ichiran.html'>地理院タイル</a>"
+    },
+    "grid": {
+      "type": "vector",
+      "tiles": ["grid://{z}/{x}/{y}"],
+      "minZoom": 1,
+      "maxZoom": 24
+    }
+  },
+  "layers": [
+    {
+      "id": "ortho",
+      "type": "raster",
+      "source": "ortho",
+      "minzoom": 1,
+      "maxzoom": 8
+    },
+    {
+      "id": "gsi",
+      "type": "raster",
+      "source": "gsi",
+      "minzoom": 8,
+      "maxzoom": 20
+    },
+    {
+      "id": "grid-line",
+      "type": "line",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "filter": [
+        "==",
+        [
+          "%",
+          ["id"],
+          [
+            "case",
+            ["<", ["zoom"], 4],
+            200000,
+            ["<", ["zoom"], 5],
+            100000,
+            ["<", ["zoom"], 6],
+            50000,
+            ["<", ["zoom"], 7],
+            20000,
+            ["<", ["zoom"], 8],
+            10000,
+            ["<", ["zoom"], 9],
+            3000,
+            ["<", ["zoom"], 10],
+            2000,
+            ["<", ["zoom"], 11],
+            1000,
+            ["<", ["zoom"], 12],
+            500,
+            ["<", ["zoom"], 13],
+            200,
+            ["<", ["zoom"], 14],
+            100,
+            ["<", ["zoom"], 15],
+            30,
+            ["<", ["zoom"], 16],
+            20,
+            10
+          ]
+        ],
+        0
+      ],
+      "paint": {
+        "line-color": ["case", ["<", ["id"], 30000000], "#006000", "#600000"],
+        "line-width": 20
+      }
+    },
+    {
+      "id": "grid-symbol",
+      "type": "symbol",
+      "source": "grid",
+      "source-layer": "line",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "filter": [
+        "==",
+        [
+          "%",
+          ["id"],
+          [
+            "case",
+            ["<", ["zoom"], 4],
+            200000,
+            ["<", ["zoom"], 5],
+            100000,
+            ["<", ["zoom"], 6],
+            50000,
+            ["<", ["zoom"], 7],
+            20000,
+            ["<", ["zoom"], 8],
+            10000,
+            ["<", ["zoom"], 10],
+            2000,
+            ["<", ["zoom"], 11],
+            1000,
+            ["<", ["zoom"], 12],
+            500,
+            ["<", ["zoom"], 13],
+            200,
+            ["<", ["zoom"], 14],
+            100,
+            ["<", ["zoom"], 15],
+            20,
+            10
+          ]
+        ],
+        0
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 1,
+        "text-field": ["get", "label"],
+        "text-size": 18,
+        "text-font": ["NotoSansCJKjp-Regular"]
+      },
+      "paint": {
+        "text-color": "#ffffff"
+      }
+    }
+  ],
+  "projection": {
+    "type": "globe"
+  }
+}

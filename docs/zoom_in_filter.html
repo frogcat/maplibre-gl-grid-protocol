@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>maplibre-gl-grid-protocol</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
+    <link href="https://unpkg.com/maplibre-gl@^5.0.0-pre.7/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://unpkg.com/maplibre-gl@^5.0.0-pre.7/dist/maplibre-gl.js"></script>
+    <!--
+    <link href="https://unpkg.com/maplibre-gl@1.15.3/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://unpkg.com/maplibre-gl@1.15.3/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+  -->
+    <script src="maplibre-gl-grid-protocol.min.js"></script>
+    <style>
+      #map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      maplibregl.addProtocol("grid", GridProtocol.createLoadFn());
+
+      const map = new maplibregl.Map({
+        container: "map",
+        center: [140, 40],
+        hash: true,
+        zoom: 3,
+        pitch: 0,
+        bearing: 0,
+        style: "zoom_in_filter.json",
+      });
+      map.showTileBoundaries = true;
+    </script>
+  </body>
+</html>
